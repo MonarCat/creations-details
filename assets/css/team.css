@@ -1,0 +1,3 @@
+section em{color:var(--amber)}.leader{background:#fff;border:1px solid var(--gray-300);padding:1.2rem}.disciplines{grid-template-columns:repeat(4,minmax(0,1fr))}.cta-strip{background:var(--blue);color:#fff;padding:3rem 0;text-align:center}.cta-strip h2{margin-bottom:.8rem}
+@media(max-width:1024px){.disciplines{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){.disciplines{grid-template-columns:1fr}}
