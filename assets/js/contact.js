@@ -1,47 +1,67 @@
 (() => {
-  const form = document.getElementById('enquiryForm');
-  if (!form) return;
+  const form = document.getElementById('quoteForm');
+  const result = document.getElementById('formResult');
 
-  const setError = (field, message) => {
-    const existing = field.parentElement.querySelector('.field-error');
-    if (existing) existing.remove();
-    if (!message) return;
-    const error = document.createElement('small');
-    error.className = 'field-error';
-    error.textContent = message;
-    field.parentElement.appendChild(error);
-  };
+  if (form && result) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault();
-    let valid = true;
+      const submitButton = form.querySelector('button[type="submit"]');
+      const originalLabel = submitButton?.textContent || 'Send Enquiry →';
 
-    form.querySelectorAll('[required]').forEach((field) => {
-      const value = field.value.trim();
-      if (!value) {
-        valid = false;
-        setError(field, 'This field is required.');
-      } else {
-        setError(field, '');
+      if (!form.reportValidity()) {
+        return;
+      }
+
+      if (submitButton) {
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+      }
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+        const data = await response.json();
+
+        result.style.display = 'block';
+
+        if (data.success) {
+          result.style.background = '#d4edda';
+          result.style.color = '#155724';
+          result.innerHTML = '✓ Thank you! We\'ll be in touch within 24 hours.';
+
+          if (typeof window.gtag !== 'undefined') {
+            window.gtag('event', 'form_submit', {
+              event_category: 'Lead',
+              event_label: 'Quote Form'
+            });
+          }
+
+          form.reset();
+        } else {
+          result.style.background = '#f8d7da';
+          result.style.color = '#721c24';
+          result.innerHTML = '✗ Something went wrong. Please WhatsApp us directly.';
+        }
+      } catch (error) {
+        result.style.display = 'block';
+        result.style.background = '#f8d7da';
+        result.style.color = '#721c24';
+        result.innerHTML = '✗ Something went wrong. Please WhatsApp us directly.';
+      } finally {
+        if (submitButton) {
+          submitButton.textContent = originalLabel;
+          submitButton.disabled = false;
+        }
       }
     });
-
-    const email = form.querySelector('input[name="email"]');
-    if (email.value && !/^\S+@\S+\.\S+$/.test(email.value)) {
-      valid = false;
-      setError(email, 'Please enter a valid email address.');
-    }
-
-    if (!valid) return;
-
-    const values = Object.fromEntries(new FormData(form).entries());
-    console.log('Enquiry submission:', values);
-    const name = values.firstName || 'there';
-    form.outerHTML = `<div class="success-card"><h3>Thank you, ${name}!</h3><p>We've received your enquiry and will be in touch within 24 hours.</p></div>`;
-  });
+  }
 
   document.querySelectorAll('.faq-item').forEach((item) => {
-    item.querySelector('.faq-question').addEventListener('click', () => {
+    item.querySelector('.faq-question')?.addEventListener('click', () => {
       item.classList.toggle('open');
     });
   });

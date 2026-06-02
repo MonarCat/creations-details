@@ -1,0 +1,27 @@
+.process-detail { background: #fff; }
+
+.process-detail-content p { color: #333; }
+
+.cta-section {
+  padding: 4rem 0;
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-section p {
+  margin: .8rem auto 1.4rem;
+  max-width: 680px;
+  color: var(--gray-300);
+}
+
+.cta-section .btn-whatsapp {
+  margin-left: .6rem;
+}
+
+@media (max-width: 767px) {
+  .cta-section .btn-whatsapp {
+    margin-left: 0;
+    margin-top: .6rem;
+  }
+}

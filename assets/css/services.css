@@ -1,1 +1,71 @@
-section em{color:var(--amber)}.service-stack{display:grid;gap:1rem}.service-item{padding:1.3rem;border:1px solid var(--gray-300);background:#fff}.service-item ul{padding-left:1.1rem;display:grid;gap:.35rem;margin:.8rem 0}.service-item a{color:var(--blue);font-weight:600;text-decoration:none}
+section em { color: var(--amber); }
+
+.service-stack { display: grid; gap: 1rem; }
+.service-item { padding: 1.3rem; border: 1px solid var(--gray-300); background: #fff; }
+.service-item ul { padding-left: 1.1rem; display: grid; gap: .35rem; margin: .8rem 0; }
+.service-item a { color: var(--blue); font-weight: 600; text-decoration: none; }
+
+.process-section { padding: 5rem 0; background: #f8f9fa; }
+.process-section h2 em { color: var(--amber); }
+.section-subtitle { margin-top: .8rem; color: #555; max-width: 760px; }
+
+.process-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 3rem;
+  position: relative;
+}
+
+.process-timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, #1e3a8a, #f59e0b);
+}
+
+.process-step {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  padding: 1.5rem 0;
+  position: relative;
+}
+
+.process-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #1e3a8a;
+  color: #f59e0b;
+  font-weight: 800;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, .2);
+}
+
+.process-content { padding-top: .75rem; }
+.process-content h3 { margin: 0 0 .5rem; font-size: 1.1rem; color: #0d1b3e; }
+.process-content p { margin: 0; color: #555; line-height: 1.6; }
+
+@media (min-width: 768px) {
+  .process-timeline { flex-direction: row; flex-wrap: wrap; gap: 2rem; }
+  .process-timeline::before { display: none; }
+  .process-step {
+    flex-direction: column;
+    flex: 1;
+    min-width: 180px;
+    align-items: center;
+    text-align: center;
+  }
+  .process-icon { margin-bottom: 1rem; }
+}
