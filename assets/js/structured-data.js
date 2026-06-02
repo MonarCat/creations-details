@@ -5,10 +5,11 @@
     name: 'Creations & Details Limited',
     description: 'Full-service interior design and construction firm in Nairobi, Kenya.',
     url: 'https://creationsanddetails.co.ke',
-    telephone: '+254700000000',
-    email: 'info@creationsanddetails.co.ke',
+    telephone: '+254715194483',
+    email: 'creationdetails20@gmail.com',
     address: {
       '@type': 'PostalAddress',
+      streetAddress: '2nd Floor Mountain Mall Building, Rosters - Off Thika Road',
       addressLocality: 'Nairobi',
       addressCountry: 'KE'
     },
