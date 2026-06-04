@@ -2,11 +2,16 @@
 <html lang="en">
 <head>
 <title>Portfolio | Creations & Details Limited Projects</title>
-<meta name="description" content="Browse our portfolio of completed residential interior design and construction projects across Nairobi — Ruiru, Ruai, Katani and more.">
+<meta name="description" content="Browse our portfolio of completed residential interior design and construction projects across Nairobi — kitchens, exteriors, bathrooms, furniture and more.">
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <meta name="theme-color" content="#0A1628">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Portfolio | Creations &amp; Details Limited">
+<meta property="og:description" content="Real projects. Real spaces. Browse our completed work across Nairobi.">
+<meta property="og:image" content="https://creationsdetails.com/assets/images/logo.png">
+<meta property="og:url" content="https://creationsdetails.com/portfolio.html">
+<link rel="canonical" href="https://creationsdetails.com/portfolio.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -33,10 +38,7 @@
   <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
 </nav>
 <div class="nav-mobile-overlay" id="mobileMenu">
-  <div class="mobile-top">
-    <strong>Menu</strong>
-    <button class="mobile-close" aria-label="Close menu">&times;</button>
-  </div>
+  <div class="mobile-top"><strong>Menu</strong><button class="mobile-close" aria-label="Close menu">&times;</button></div>
   <ul class="mobile-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -46,21 +48,86 @@
     <li><a href="contact.html">Get a Quote</a></li>
   </ul>
 </div>
+
 <main>
-<section class="page-hero-inner"><div class="container"><div class="eyebrow centered"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Work</span></div><h1>Projects That <em>Speak.</em></h1><p>A selection of completed projects — each one a testament to what happens when design meets disciplined execution.</p></div></section>
-<section class="section"><div class="container"><div class="filter-bar"><button class="filter-btn active" data-filter="all">All</button><button class="filter-btn" data-filter="residential">Residential</button><button class="filter-btn" data-filter="interior">Interior</button><button class="filter-btn" data-filter="exterior">Exterior</button><button class="filter-btn" data-filter="kitchen">Kitchen</button><button class="filter-btn" data-filter="bathroom">Bathroom &amp; Fixtures</button><button class="filter-btn" data-filter="furniture">Furniture</button></div>
-<div class="projects-grid" id="projectsGrid">
-<article class="project-card" tabindex="0" data-key="bara" data-category="residential interior"><img src="assets/images/projects/residences/IMG-20260602-WA0103.jpg" alt="Bara Swahili Dishes restaurant interior seating and decor"><div class="project-card-body"><h3>Bara Swahili Dishes</h3><p>Runda Mall, Nairobi</p></div></article>
-<article class="project-card" tabindex="0" data-key="runda" data-category="residential exterior interior"><img src="assets/images/projects/residences/IMG-20260602-WA0106.jpg" alt="Runda Residence exterior with landscaped garden"><div class="project-card-body"><h3>Runda Residence</h3><p>Runda, Nairobi</p></div></article>
-<article class="project-card" tabindex="0" data-key="interior-showcase" data-category="interior furniture"><img src="assets/images/projects/furniture/IMG-20260602-WA0042.jpg" alt="Interior fitting showcase with feature wall and upholstered panels"><div class="project-card-body"><h3>Interior Fitting Showcase</h3><p>Designs, finishes &amp; wardrobes</p></div></article>
-<article class="project-card" tabindex="0" data-key="exterior-showcase" data-category="exterior"><img src="assets/images/projects/exterior/IMG-20260602-WA0084.jpg" alt="Exterior showcase with modern residence and garden"><div class="project-card-body"><h3>Exterior Showcase</h3><p>Facades, lawns &amp; outdoor details</p></div></article>
-<article class="project-card" tabindex="0" data-key="kitchen-showcase" data-category="kitchen interior"><img src="assets/images/projects/kitchen/IMG-20260602-WA0057.jpg" alt="Kitchen showcase with fitted cabinetry and island"><div class="project-card-body"><h3>Kitchen Showcase</h3><p>Cabinetry, islands &amp; counters</p></div></article>
-<article class="project-card" tabindex="0" data-key="bathroom-showcase" data-category="bathroom interior"><img src="assets/images/projects/bathroom&fixtures/IMG-20260602-WA0029.jpg" alt="Bathroom fixtures showcase with illuminated mirror and vanity"><div class="project-card-body"><h3>Bathroom &amp; Fixtures Showcase</h3><p>Premium fixtures · Nairobi</p></div></article>
-<article class="project-card" tabindex="0" data-key="furniture-collection" data-category="furniture interior"><img src="assets/images/projects/furniture/IMG-20260602-WA0079.jpg" alt="Custom furniture collection with built-in wardrobe fittings"><div class="project-card-body"><h3>Custom Furniture Collection</h3><p>Bespoke joinery · Nairobi</p></div></article>
-</div></div></section>
-<div class="project-modal" id="projectModal" aria-hidden="true"><div class="modal-backdrop" data-close="true"></div><div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" aria-label="Close modal">&times;</button><h2 id="modalTitle"></h2><div class="modal-gallery" id="modalGallery"></div><p id="modalClient"></p><p id="modalLocation"></p><p id="modalScope"></p><ul id="modalHighlights"></ul><a class="btn-primary" href="contact.html">Discuss a Similar Project →</a></div></div>
-<section class="cta-strip"><div class="container"><h2>Want a similar transformation?</h2><a class="btn-primary" href="contact.html">Talk to Us</a></div></section>
+<!-- HERO -->
+<section class="page-hero-inner">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center"><span class="eyebrow-line"></span><span class="eyebrow-text">Our Work</span></div>
+    <h1>Projects That <em>Speak.</em></h1>
+    <p>A selection of completed projects — each one a testament to what happens when design meets disciplined execution.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Portfolio</div>
+  </div>
+</section>
+
+<!-- PORTFOLIO GRID -->
+<section class="section">
+  <div class="container">
+
+    <!-- Stats bar -->
+    <div class="portfolio-stats">
+      <div class="portfolio-stat"><strong>111+</strong><span>Photos</span></div>
+      <div class="portfolio-stat"><strong>8</strong><span>Projects</span></div>
+      <div class="portfolio-stat"><strong>6</strong><span>Categories</span></div>
+      <div class="portfolio-stat"><strong>150+</strong><span>Completed</span></div>
+    </div>
+
+    <!-- Filter bar -->
+    <div class="filter-bar">
+      <span class="filter-bar-label">Filter:</span>
+      <button class="filter-btn active" data-filter="all">All <span class="count">8</span></button>
+      <button class="filter-btn" data-filter="residential">Residential <span class="count">2</span></button>
+      <button class="filter-btn" data-filter="interior">Interior <span class="count">4</span></button>
+      <button class="filter-btn" data-filter="exterior">Exterior <span class="count">2</span></button>
+      <button class="filter-btn" data-filter="kitchen">Kitchen <span class="count">1</span></button>
+      <button class="filter-btn" data-filter="bathroom">Bathroom <span class="count">1</span></button>
+      <button class="filter-btn" data-filter="furniture">Furniture <span class="count">2</span></button>
+    </div>
+
+    <!-- Grid — populated by JS -->
+    <div class="projects-grid" id="projectsGrid"></div>
+    <p class="no-results"><h3>No projects in this category yet.</h3>More coming soon.</p>
+
+  </div>
+</section>
+
+<!-- CTA STRIP -->
+<section class="cta-strip">
+  <div class="container">
+    <h2>Want a Similar <em>Transformation?</em></h2>
+    <p>Tell us about your space and we'll show you what's possible.</p>
+    <a class="btn-primary" href="contact.html">Start Your Project</a>&nbsp;&nbsp;
+    <a class="btn-outline" href="services.html" style="margin-top:.5rem">Explore Services</a>
+  </div>
+</section>
 </main>
+
+<!-- PROJECT MODAL -->
+<div class="project-modal" id="projectModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close="true"></div>
+  <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-header">
+      <h2 id="modalTitle"></h2>
+      <button class="modal-close" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="modal-meta" id="modalMeta"></div>
+    <div class="modal-gallery" id="modalGallery"></div>
+    <div class="modal-footer">
+      <ul class="modal-highlights" id="modalHighlights"></ul>
+      <a class="btn-primary" href="contact.html">Discuss a Similar Project →</a>
+    </div>
+  </div>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Image viewer">
+  <button class="lightbox-close" id="lbClose" aria-label="Close lightbox">&times;</button>
+  <button class="lightbox-prev" id="lbPrev" aria-label="Previous image">&#8249;</button>
+  <img id="lbImg" src="" alt="Project photo">
+  <button class="lightbox-next" id="lbNext" aria-label="Next image">&#8250;</button>
+  <div class="lightbox-counter" id="lbCounter"></div>
+</div>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-about">
@@ -72,12 +139,11 @@
         </div>
       </div>
       <p>A premier full-service interior design and construction company delivering bespoke spaces across Nairobi and Kenya.</p>
-      <!-- PLACEHOLDER: Update social profile links with real handles -->
       <div class="footer-social">
-        <a class="social-link" href="#" title="Instagram"><img src="assets/images/ig-logo.jpg" alt="Instagram"></a>
-        <a class="social-link" href="#" title="Facebook"><img src="assets/images/fb-logo.jpg" alt="Facebook"></a>
-        <a class="social-link" href="#" title="LinkedIn"><img src="assets/images/linkedin-logo.jpg" alt="LinkedIn"></a>
-        <a class="social-link" href="#" title="TikTok"><img src="assets/images/tiktok-logo.jpg" alt="TikTok"></a>
+        <a class="social-link" href="https://www.instagram.com/creationsanddetailsltd" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><img src="assets/images/ig-logo.jpg" alt="Instagram"></a>
+        <a class="social-link" href="https://www.facebook.com/creationsanddetailsltd" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><img src="assets/images/fb-logo.jpg" alt="Facebook"></a>
+        <a class="social-link" href="https://www.linkedin.com/company/creations-and-details" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><img src="assets/images/linkedin-logo.jpg" alt="LinkedIn"></a>
+        <a class="social-link" href="https://www.tiktok.com/@creationsanddetailsltd" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok"><img src="assets/images/tiktok-logo.jpg" alt="TikTok"></a>
       </div>
     </div>
     <div class="footer-col">
