@@ -1,234 +1,224 @@
 (() => {
-  const portfolioData = [
-    {
-      id: 'ruiru',
-      title: 'Ruiru Residence',
-      client: 'Justin',
-      location: 'Ruiru, Kiambu County',
-      categories: ['residential', 'exterior', 'interior', 'kitchen', 'furniture'],
-      heroImage: '/assets/images/portfolio/ruiru_exterior_01_frontgate.jpg',
-      description: 'Full exterior redesign and complete interior fitout — from parquet herringbone floors to bespoke kitchen cabinetry, live-edge furniture, and a custom jacuzzi bathroom.',
-      testimonial: '"The team transformed our house into something we couldn\'t have imagined. Every detail was executed flawlessly." — Justin M.',
-      images: [
-        { src: '/assets/images/portfolio/ruiru_exterior_01_frontgate.jpg', caption: 'Completed front facade' },
-        { src: '/assets/images/portfolio/ruiru_exterior_02_pergola_closeup.jpg', caption: 'Pergola detail' },
-        { src: '/assets/images/portfolio/ruiru_exterior_03_side_view.jpg', caption: 'Side elevation' },
-        { src: '/assets/images/portfolio/ruiru_exterior_04_rear_corner.jpg', caption: 'Rear with landscaping' },
-        { src: '/assets/images/portfolio/ruiru_living_01_parquet_floor_wide.jpg', caption: 'Herringbone parquet flooring' },
-        { src: '/assets/images/portfolio/ruiru_kitchen_01_wide_overhead.jpg', caption: 'Kitchen with cove lighting' },
-        { src: '/assets/images/portfolio/ruiru_bathroom_03_double_basin.jpg', caption: 'Double basin bathroom vanity' },
-        { src: '/assets/images/portfolio/ruiru_bathroom_06_jacuzzi_bath.jpg', caption: 'Jacuzzi installation' },
-        { src: '/assets/images/portfolio/ruiru_living_03_dining_table_left.jpg', caption: 'Custom live-edge dining table' }
-      ]
-    },
-    {
-      id: 'ruai',
-      title: 'Ruai Residence',
-      client: 'Frankline',
-      location: 'Ruai, Nairobi',
-      categories: ['residential', 'exterior', 'interior', 'kitchen'],
-      heroImage: '/assets/images/portfolio/ruai_exterior_01_completed_frontview.jpg',
-      description: 'Full construction from slab to polished handover — including structural build, roofing, gate, landscaping, timber staircase with steel balustrade, full kitchen fitout, and living room interior.',
-      testimonial: '"They managed everything — I didn\'t have to chase a single contractor. One call, one team, delivered on time and within budget." — Frankline K.',
-      images: [
-        { src: '/assets/images/portfolio/ruai_exterior_01_completed_frontview.jpg', caption: 'Completed front' },
-        { src: '/assets/images/portfolio/ruai_exterior_02_construction_phase1.jpg', caption: 'Construction phase 1' },
-        { src: '/assets/images/portfolio/ruai_exterior_03_construction_phase2.jpg', caption: 'Construction phase 2' },
-        { src: '/assets/images/portfolio/ruai_exterior_05_completed_angle.jpg', caption: 'Completed side angle' },
-        { src: '/assets/images/portfolio/ruai_interior_02_living_room.jpg', caption: 'Living room — completed interior' },
-        { src: '/assets/images/portfolio/ruai_interior_01_staircase.jpg', caption: 'Timber staircase with steel balustrade' },
-        { src: '/assets/images/portfolio/ruai_kitchen_01_island_wide.jpg', caption: 'Kitchen island — wide view' },
-        { src: '/assets/images/portfolio/ruai_kitchen_02_island_angle1.jpg', caption: 'Kitchen island detail' }
-      ]
-    },
-    {
-      id: 'katani',
-      title: 'Katani Residence',
-      client: 'Lyndah Nyangweso',
-      location: 'Katani, Machakos County',
-      categories: ['residential', 'exterior', 'kitchen', 'interior'],
-      heroImage: '/assets/images/portfolio/katani_exterior_01_completed_front.jpg',
-      description: 'Complete residential build with bespoke interior design — featuring a statement kitchen with warm-lit timber cabinetry, marble island, and a striking contemporary exterior.',
-      testimonial: '"The kitchen they designed for me is the envy of every guest. Highly recommended." — Lyndah Nyangweso',
-      images: [
-        { src: '/assets/images/portfolio/katani_exterior_01_completed_front.jpg', caption: 'Completed front elevation' },
-        { src: '/assets/images/portfolio/katani_exterior_05_completed_sunset.jpg', caption: 'Evening angle' },
-        { src: '/assets/images/portfolio/katani_exterior_02_construction_early.jpg', caption: 'Early construction' },
-        { src: '/assets/images/portfolio/katani_exterior_03_construction_midway.jpg', caption: 'Midway progress' },
-        { src: '/assets/images/portfolio/katani_kitchen_01_island_warmlight.jpg', caption: 'Bespoke kitchen — warm lighting' },
-        { src: '/assets/images/portfolio/katani_kitchen_02_cabinetry_detail.jpg', caption: 'Timber cabinetry with marble splash' }
-      ]
-    },
-    {
-      id: 'interiors-showcase',
-      title: 'Interior Fitting Showcase',
-      client: 'Multiple',
-      location: 'Nairobi & environs',
-      categories: ['interior', 'kitchen'],
-      heroImage: '/assets/images/portfolio/mixed_05_kitchen_island_classic.jpg',
-      description: 'A selection of fitted kitchens, wardrobes, corridors, and interior finishes from various residential projects across Nairobi.',
-      testimonial: null,
-      images: [
-        { src: '/assets/images/portfolio/mixed_03_kitchen_blackwhite_cabinets.jpg', caption: 'Black & white kitchen' },
-        { src: '/assets/images/portfolio/mixed_05_kitchen_island_classic.jpg', caption: 'Classic shaker kitchen island' },
-        { src: '/assets/images/portfolio/mixed_04_wardrobe_charcoal.jpg', caption: 'Floor-to-ceiling charcoal wardrobe' },
-        { src: '/assets/images/portfolio/mixed_06_wardrobe_grey_sliding.jpg', caption: 'Grey sliding wardrobe' },
-        { src: '/assets/images/portfolio/mixed_07_entrance_door_timber.jpg', caption: 'Grand timber pivot entrance door' },
-        { src: '/assets/images/portfolio/mixed_08_tv_unit_marble_feature.jpg', caption: 'TV unit with marble feature wall' },
-        { src: '/assets/images/portfolio/ruiru_interior_01_kitchen_garden.jpg', caption: 'Vertical kitchen garden' }
-      ]
-    },
-    {
-      id: 'bathrooms-showcase',
-      title: 'Bathroom & Fixtures',
-      client: 'Multiple',
-      location: 'Nairobi & environs',
-      categories: ['interior'],
-      heroImage: '/assets/images/portfolio/ruiru_bathroom_03_double_basin.jpg',
-      description: 'Premium bathroom fitouts including double vanities, jacuzzi installations, rain showers, and full wet-area tiling.',
-      testimonial: null,
-      images: [
-        { src: '/assets/images/portfolio/ruiru_bathroom_03_double_basin.jpg', caption: 'Double basin vanity' },
-        { src: '/assets/images/portfolio/ruiru_bathroom_06_jacuzzi_bath.jpg', caption: 'Jacuzzi bath' },
-        { src: '/assets/images/portfolio/ruiru_bathroom_01_vanity_mirror.jpg', caption: 'Vanity with mirror' },
-        { src: '/assets/images/portfolio/ruiru_bathroom_02_cabinet_medicine.jpg', caption: 'Medicine cabinet' },
-        { src: '/assets/images/portfolio/ruiru_bathroom_05_rain_shower.jpg', caption: 'Rain shower head' }
-      ]
-    },
-    {
-      id: 'furniture-showcase',
-      title: 'Custom Furniture Collection',
-      client: 'Multiple',
-      location: 'Nairobi',
-      categories: ['furniture'],
-      heroImage: '/assets/images/portfolio/furniture_04_sofa_cognac_set.jpg',
-      description: 'Bespoke furniture crafted in-house — live-edge dining tables, sofas, accent chairs, slatted display cabinets, and custom upholstery.',
-      testimonial: null,
-      images: [
-        { src: '/assets/images/portfolio/furniture_01_dining_liveedge_table.jpg', caption: 'Live-edge dining table' },
-        { src: '/assets/images/portfolio/furniture_02_sofa_navy_corner.jpg', caption: 'Navy corner sofa' },
-        { src: '/assets/images/portfolio/furniture_04_sofa_cognac_set.jpg', caption: 'Cognac leather sofa set' },
-        { src: '/assets/images/portfolio/furniture_06_cabinet_slatted.jpg', caption: 'Slatted display cabinet' },
-        { src: '/assets/images/portfolio/furniture_07_chair_teak.jpg', caption: 'Teak accent chair' },
-        { src: '/assets/images/portfolio/furniture_08_barstool_liveedge.jpg', caption: 'Live-edge barstool' },
-        { src: '/assets/images/portfolio/furniture_03_round_mirror_feature.jpg', caption: 'Round decorative mirror' }
-      ]
-    }
-  ];
-
-  const grid = document.getElementById('projectsGrid');
   const filters = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+  const grid = document.getElementById('projectsGrid');
   const modal = document.getElementById('projectModal');
+  if (!cards.length) return;
 
-  if (!grid || !modal) return;
+  const data = {
+    bara: {
+      title: 'Bara Swahili Dishes',
+      client: 'Category: Residential / hospitality interior',
+      location: 'Location: Runda Mall, Nairobi',
+      scope: 'Scope: Restaurant interior finishes, seating and decor detailing',
+      images: ['assets/images/projects/residences/IMG-20260602-WA0103.jpg','assets/images/projects/residences/IMG-20260602-WA0104.jpg','assets/images/projects/residences/IMG-20260602-WA0105.jpg','assets/images/projects/residences/IMG-20260602-WA0107.jpg','assets/images/projects/residences/IMG-20260602-WA0109.jpg','assets/images/projects/residences/IMG-20260602-WA0110.jpg','assets/images/projects/residences/IMG-20260602-WA0112.jpg','assets/images/projects/residences/IMG-20260602-WA0113.jpg','assets/images/projects/residences/IMG-20260602-WA0114.jpg','assets/images/projects/residences/IMG-20260602-WA0115.jpg','assets/images/projects/residences/IMG-20260602-WA0116.jpg','assets/images/projects/residences/IMG-20260602-WA0118.jpg','assets/images/projects/residences/IMG-20260602-WA0119.jpg','assets/images/projects/residences/IMG-20260602-WA0120.jpg','assets/images/projects/residences/IMG-20260602-WA0121.jpg','assets/images/projects/residences/IMG-20260602-WA0122.jpg','assets/images/projects/residences/IMG-20260602-WA0123.jpg','assets/images/projects/residences/IMG-20260602-WA0124.jpg','assets/images/projects/residences/IMG-20260602-WA0125.jpg','assets/images/projects/residences/IMG-20260602-WA0126.jpg'],
+      alt: 'Bara Swahili Dishes interior showcase',
+      highlights: ['Warm dining ambience','Custom booth seating','Decorative rope partitioning','Feature lighting and wall finishes','Coordinated table and service details']
+    },
+    runda: {
+      title: 'Runda Residence',
+      client: 'Category: Residential project',
+      location: 'Location: Runda, Nairobi',
+      scope: 'Scope: Residential exterior and interior works',
+      images: ['assets/images/projects/residences/IMG-20260602-WA0106.jpg','assets/images/projects/residences/IMG-20260602-WA0108.jpg','assets/images/projects/residences/IMG-20260602-WA0111.jpg','assets/images/projects/residences/IMG-20260602-WA0127.jpg','assets/images/projects/residences/IMG-20260602-WA0128.jpg','assets/images/projects/exterior/IMG-20260602-WA0084.jpg'],
+      alt: 'Runda Residence project showcase',
+      highlights: ['Contemporary residence exterior','Landscaped garden approach','Stone and timber accent finishes','Balcony and pergola detailing','Polished residential presentation']
+    },
+    'interior-showcase': {
+      title: 'Interior Fitting Showcase',
+      client: 'Category: Interior design, finishes and wardrobe fittings',
+      location: 'Location: Nairobi',
+      scope: 'Scope: Interior designs, floor and wall finishes, wardrobes and fitted features',
+      images: ['assets/images/projects/interior/IMG-20260602-WA0015.jpg','assets/images/projects/interior/IMG-20260602-WA0016.jpg','assets/images/projects/interior/IMG-20260602-WA0017.jpg','assets/images/projects/interior/IMG-20260602-WA0018.jpg','assets/images/projects/interior/IMG-20260602-WA0019.jpg','assets/images/projects/interior/IMG-20260602-WA0020.jpg','assets/images/projects/interior/IMG-20260602-WA0021.jpg','assets/images/projects/interior/IMG-20260602-WA0022.jpg','assets/images/projects/interior/IMG-20260602-WA0023.jpg','assets/images/projects/interior/IMG-20260602-WA0026.jpg','assets/images/projects/interior/IMG-20260602-WA0030.jpg','assets/images/projects/interior/IMG-20260602-WA0034.jpg','assets/images/projects/interior/IMG-20260602-WA0039.jpg','assets/images/projects/interior/IMG-20260602-WA0043.jpg','assets/images/projects/interior/IMG-20260602-WA0044.jpg','assets/images/projects/interior/IMG-20260602-WA0046.jpg','assets/images/projects/interior/IMG-20260602-WA0047.jpg','assets/images/projects/interior/IMG-20260602-WA0048.jpg','assets/images/projects/interior/IMG-20260602-WA0050.jpg','assets/images/projects/interior/IMG-20260602-WA0051.jpg','assets/images/projects/interior/IMG-20260602-WA0052.jpg','assets/images/projects/interior/IMG-20260602-WA0055.jpg','assets/images/projects/interior/IMG-20260602-WA0056.jpg','assets/images/projects/interior/IMG-20260602-WA0062.jpg','assets/images/projects/interior/IMG-20260602-WA0065.jpg','assets/images/projects/interior/IMG-20260602-WA0066.jpg','assets/images/projects/interior/IMG-20260602-WA0069.jpg','assets/images/projects/interior/IMG-20260602-WA0072.jpg','assets/images/projects/interior/IMG-20260602-WA0082.jpg','assets/images/projects/furniture/IMG-20260602-WA0042.jpg','assets/images/projects/furniture/IMG-20260602-WA0049.jpg','assets/images/projects/furniture/IMG-20260602-WA0076.jpg','assets/images/projects/furniture/IMG-20260602-WA0079.jpg'],
+      alt: 'Interior design and fitting showcase',
+      highlights: ['Interior design layouts','Floor and wall finish details','Wardrobe and storage fittings','Feature wall treatments','Coordinated room finishes']
+    },
+    'exterior-showcase': {
+      title: 'Exterior Showcase',
+      client: 'Category: Exterior works',
+      location: 'Location: Nairobi',
+      scope: 'Scope: Exterior facades, landscaping, pergolas and outdoor finishes',
+      images: ['assets/images/projects/exterior/IMG-20260602-WA0053.jpg','assets/images/projects/exterior/IMG-20260602-WA0073.jpg','assets/images/projects/exterior/IMG-20260602-WA0074.jpg','assets/images/projects/exterior/IMG-20260602-WA0075.jpg','assets/images/projects/exterior/IMG-20260602-WA0080.jpg','assets/images/projects/exterior/IMG-20260602-WA0081.jpg','assets/images/projects/exterior/IMG-20260602-WA0084.jpg','assets/images/projects/exterior/IMG-20260602-WA0085.jpg','assets/images/projects/exterior/IMG-20260602-WA0086.jpg','assets/images/projects/exterior/IMG-20260602-WA0087.jpg','assets/images/projects/exterior/IMG-20260602-WA0088.jpg','assets/images/projects/exterior/IMG-20260602-WA0089.jpg','assets/images/projects/exterior/IMG-20260602-WA0090.jpg','assets/images/projects/exterior/IMG-20260602-WA0091.jpg','assets/images/projects/exterior/IMG-20260602-WA0092.jpg','assets/images/projects/exterior/IMG-20260602-WA0093.jpg','assets/images/projects/exterior/IMG-20260602-WA0094.jpg','assets/images/projects/exterior/IMG-20260602-WA0095.jpg','assets/images/projects/exterior/IMG-20260602-WA0096.jpg','assets/images/projects/exterior/IMG-20260602-WA0097.jpg','assets/images/projects/exterior/IMG-20260602-WA0098.jpg','assets/images/projects/exterior/IMG-20260602-WA0099.jpg','assets/images/projects/exterior/IMG-20260602-WA0100.jpg','assets/images/projects/exterior/IMG-20260602-WA0101.jpg','assets/images/projects/exterior/IMG-20260602-WA0102.jpg'],
+      alt: 'Exterior project showcase',
+      highlights: ['Modern residence facades','Landscaped outdoor areas','Pergola and balcony details','Stone and timber exterior finishes','Clean exterior presentation']
+    },
+    'kitchen-showcase': {
+      title: 'Kitchen Showcase',
+      client: 'Category: Kitchen design',
+      location: 'Location: Nairobi',
+      scope: 'Scope: Kitchen cabinetry, islands, counters and appliance-ready fittings',
+      images: ['assets/images/projects/kitchen/IMG-20260602-WA0024.jpg','assets/images/projects/kitchen/IMG-20260602-WA0025.jpg','assets/images/projects/kitchen/IMG-20260602-WA0027.jpg','assets/images/projects/kitchen/IMG-20260602-WA0033.jpg','assets/images/projects/kitchen/IMG-20260602-WA0035.jpg','assets/images/projects/kitchen/IMG-20260602-WA0040.jpg','assets/images/projects/kitchen/IMG-20260602-WA0041.jpg','assets/images/projects/kitchen/IMG-20260602-WA0057.jpg','assets/images/projects/kitchen/IMG-20260602-WA0058.jpg','assets/images/projects/kitchen/IMG-20260602-WA0059.jpg','assets/images/projects/kitchen/IMG-20260602-WA0060.jpg','assets/images/projects/kitchen/IMG-20260602-WA0061.jpg','assets/images/projects/kitchen/IMG-20260602-WA0063.jpg','assets/images/projects/kitchen/IMG-20260602-WA0064.jpg','assets/images/projects/kitchen/IMG-20260602-WA0067.jpg'],
+      alt: 'Kitchen design and fitting showcase',
+      highlights: ['Fitted kitchen cabinetry','Kitchen island installation','Integrated counter workspace','Coordinated flooring and finishes','Clean modern kitchen detailing']
+    },
+    'bathroom-showcase': {
+      title: 'Bathroom & Fixtures Showcase',
+      client: 'Category: Bathroom and fixtures',
+      location: 'Location: Nairobi',
+      scope: 'Scope: Premium bathroom fixtures and fitout',
+      images: ['assets/images/projects/bathroom&fixtures/IMG-20260602-WA0028.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0029.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0031.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0032.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0036.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0037.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0038.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0077.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0078.jpg','assets/images/projects/bathroom&fixtures/IMG-20260602-WA0083.jpg'],
+      alt: 'Bathroom fixtures showcase',
+      highlights: ['Illuminated mirror installation','Custom vanity and basin','Stone-look wall finishes','Concealed flush and fixture details','Modern bathroom lighting']
+    },
+    'furniture-collection': {
+      title: 'Custom Furniture Collection',
+      client: 'Category: Custom furniture',
+      location: 'Location: Nairobi',
+      scope: 'Scope: Bespoke furniture, joinery, wardrobes and feature panels',
+      images: ['assets/images/projects/furniture/IMG-20260602-WA0042.jpg','assets/images/projects/furniture/IMG-20260602-WA0045.jpg','assets/images/projects/furniture/IMG-20260602-WA0049.jpg','assets/images/projects/furniture/IMG-20260602-WA0068.jpg','assets/images/projects/furniture/IMG-20260602-WA0071.jpg','assets/images/projects/furniture/IMG-20260602-WA0076.jpg','assets/images/projects/furniture/IMG-20260602-WA0079.jpg','assets/images/projects/residences/IMG-20260602-WA0126.jpg'],
+      alt: 'Custom furniture and joinery collection',
+      highlights: ['Arched upholstered wall panels','Timber-look wall detailing','Built-in wardrobe fittings','Custom proportions and finishes','Bespoke joinery presentation']
+    }
+  };
 
-  const modalTitle = modal.querySelector('.modal-title');
-  const modalDescription = modal.querySelector('.modal-description');
-  const modalTestimonial = modal.querySelector('.modal-testimonial');
-  const modalMainImage = modal.querySelector('.modal-main-img');
-  const modalMainCaption = modal.querySelector('.modal-main-caption');
-  const modalThumbs = modal.querySelector('.modal-thumbnails');
-  const modalMeta = modal.querySelector('.modal-meta');
-  const closeButton = modal.querySelector('.modal-close');
+  const title = document.getElementById('modalTitle');
+  const client = document.getElementById('modalClient');
+  const location = document.getElementById('modalLocation');
+  const scope = document.getElementById('modalScope');
+  const modalGallery = document.getElementById('modalGallery');
+  const highlights = document.getElementById('modalHighlights');
+  const closeBtn = modal.querySelector('.modal-close');
+  let lastFocused = null;
+  let activeFilter = 'all';
+  let slideTimer = null;
+  const slideDelay = 5200;
+  const fadeDuration = 1400;
 
-  const openLightbox = (project) => {
-    let currentImageIndex = 0;
+  const prepareCardMedia = (card) => {
+    const image = card.querySelector(':scope > img');
+    if (!image) return card.querySelector('.project-card-media');
+    const media = document.createElement('div');
+    media.className = 'project-card-media';
+    image.classList.add('project-card-image');
+    card.insertBefore(media, image);
+    media.appendChild(image);
+    const more = document.createElement('button');
+    more.className = 'project-more';
+    more.type = 'button';
+    more.textContent = 'Tap for more';
+    more.setAttribute('aria-label', `View more ${data[card.dataset.key]?.title || 'project'} images`);
+    media.appendChild(more);
+    return media;
+  };
 
-    const updateMainImage = (index) => {
-      const selected = project.images[index];
-      modalMainImage.src = selected.src;
-      modalMainImage.alt = selected.caption;
-      modalMainCaption.textContent = selected.caption;
-      modalThumbs.querySelectorAll('img').forEach((img, imgIndex) => {
-        img.classList.toggle('active', imgIndex === index);
-      });
-    };
+  const renderCardPreviews = (card) => {
+    const project = data[card.dataset.key];
+    if (!project || card.querySelector('.project-card-previews')) return;
+    const previews = document.createElement('div');
+    previews.className = 'project-card-previews';
+    previews.innerHTML = project.images.slice(0, 6).map((src, index) => `<img src="${src}" alt="${project.alt} preview ${index + 1}">`).join('');
+    card.appendChild(previews);
+  };
 
-    modalTitle.textContent = `${project.title} — ${project.client}`;
-    modalDescription.textContent = project.description;
-    modalMeta.textContent = project.location;
+  const setCardImage = (card, index, animate = false) => {
+    const project = data[card.dataset.key];
+    const media = card.querySelector('.project-card-media') || prepareCardMedia(card);
+    const image = media?.querySelector('.project-card-image');
+    if (!project || !image || !project.images?.length) return;
+    const nextIndex = index % project.images.length;
+    const nextSrc = project.images[nextIndex];
+    const nextAlt = `${project.alt} ${nextIndex + 1}`;
+    card.dataset.slideIndex = String(nextIndex);
 
-    if (project.testimonial) {
-      modalTestimonial.textContent = project.testimonial;
-      modalTestimonial.style.display = 'block';
-    } else {
-      modalTestimonial.style.display = 'none';
+    if (!animate || image.src.endsWith(nextSrc)) {
+      image.src = nextSrc;
+      image.alt = nextAlt;
+      return;
     }
 
-    modalThumbs.innerHTML = '';
-    project.images.forEach((img, index) => {
-      const thumb = document.createElement('img');
-      thumb.src = img.src;
-      thumb.alt = img.caption;
-      thumb.loading = 'lazy';
-      thumb.decoding = 'async';
-      thumb.addEventListener('click', () => {
-        currentImageIndex = index;
-        updateMainImage(currentImageIndex);
-      });
-      modalThumbs.appendChild(thumb);
+    const preload = new Image();
+    preload.onload = () => {
+      const nextImage = document.createElement('img');
+      nextImage.className = 'project-card-image project-card-image-next';
+      nextImage.src = nextSrc;
+      nextImage.alt = nextAlt;
+      media.appendChild(nextImage);
+      window.requestAnimationFrame(() => nextImage.classList.add('is-visible'));
+      window.setTimeout(() => {
+        image.src = nextSrc;
+        image.alt = nextAlt;
+        nextImage.remove();
+      }, fadeDuration);
+    };
+    preload.src = nextSrc;
+  };
+
+  const cycleVisibleCards = () => {
+    if (activeFilter !== 'all') return;
+    cards.forEach((card) => {
+      if (card.classList.contains('hidden')) return;
+      const project = data[card.dataset.key];
+      if (!project || project.images.length < 2) return;
+      const currentIndex = Number(card.dataset.slideIndex || 0);
+      setCardImage(card, currentIndex + 1, true);
     });
+  };
 
-    updateMainImage(currentImageIndex);
+  const startSlides = () => {
+    window.clearInterval(slideTimer);
+    if (activeFilter === 'all') slideTimer = window.setInterval(cycleVisibleCards, slideDelay);
+  };
 
+  const openModal = (key) => {
+    const project = data[key];
+    if (!project) return;
+    lastFocused = document.activeElement;
+    title.textContent = project.title;
+    modalGallery.innerHTML = project.images.map((src, index) => `<img src="${src}" alt="${project.alt} ${index + 1}">`).join('');
+    client.textContent = project.client;
+    location.textContent = project.location;
+    scope.textContent = project.scope;
+    highlights.innerHTML = project.highlights.map((item) => `<li>${item}</li>`).join('');
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-    closeButton.focus();
+    closeBtn.focus();
   };
 
-  const closeLightbox = () => {
+  const closeModal = () => {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    lastFocused?.focus();
   };
 
-  const renderPortfolioCards = (filter = 'all') => {
-    grid.innerHTML = '';
+  modal.addEventListener('click', (event) => {
+    if (event.target.dataset.close === 'true' || event.target === modal || event.target.classList.contains('modal-close')) closeModal();
+  });
+  document.addEventListener('keydown', (event) => {
+    if (!modal.classList.contains('open')) return;
+    if (event.key === 'Escape') closeModal();
+    if (event.key === 'Tab') {
+      const focusables = modal.querySelectorAll('button, a[href]');
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+      if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+    }
+  });
 
-    const filtered = filter === 'all'
-      ? portfolioData
-      : portfolioData.filter((project) => project.categories.includes(filter));
-
-    filtered.forEach((project) => {
-      const card = document.createElement('article');
-      card.className = 'portfolio-card';
-      card.setAttribute('data-id', project.id);
-      card.innerHTML = `
-        <div class="portfolio-card-img" style="background-image: url('${project.heroImage}')">
-          <div class="portfolio-card-overlay">
-            <span class="portfolio-card-view">View Project</span>
-          </div>
-        </div>
-        <div class="portfolio-card-info">
-          <h3>${project.title}</h3>
-          <p>${project.client} · ${project.location}</p>
-        </div>
-      `;
-      card.addEventListener('click', () => openLightbox(project));
-      card.addEventListener('keydown', (event) => {
-        if (event.key === 'Enter') openLightbox(project);
-      });
-      card.tabIndex = 0;
-      grid.appendChild(card);
-    });
-  };
+  cards.forEach((card) => {
+    setCardImage(card, 0);
+    renderCardPreviews(card);
+    card.addEventListener('click', () => openModal(card.dataset.key));
+    card.addEventListener('keydown', (event) => { if (event.key === 'Enter') openModal(card.dataset.key); });
+  });
 
   filters.forEach((button) => {
     button.addEventListener('click', () => {
-      const filter = button.dataset.filter || 'all';
-      filters.forEach((item) => item.classList.toggle('active', item === button));
-      renderPortfolioCards(filter);
+      const filter = button.dataset.filter;
+      activeFilter = filter;
+      grid?.classList.toggle('filter-all', filter === 'all');
+      grid?.classList.toggle('filter-detail', filter !== 'all');
+      filters.forEach((f) => f.classList.toggle('active', f === button));
+      cards.forEach((card) => {
+        const categories = card.dataset.category.split(' ');
+        const show = filter === 'all' || categories.includes(filter);
+        card.classList.toggle('hidden', !show);
+        if (show && filter !== 'all') setCardImage(card, 0);
+      });
+      startSlides();
     });
   });
 
-  closeButton.addEventListener('click', closeLightbox);
-  modal.querySelector('.modal-backdrop')?.addEventListener('click', closeLightbox);
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && modal.classList.contains('open')) {
-      closeLightbox();
-    }
-  });
-
-  renderPortfolioCards();
+  startSlides();
+  grid?.classList.add('filter-all');
 })();

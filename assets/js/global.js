@@ -46,25 +46,4 @@
       element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
-
-  const revealElements = document.querySelectorAll(
-    '.service-card, .service-item, .portfolio-card, .project-card, .team-card, .testimonial-card, .process-step, .stat-box, .card'
-  );
-
-  if (revealElements.length) {
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (!entry.isIntersecting) return;
-
-        const siblings = entry.target.parentElement ? Array.from(entry.target.parentElement.children) : [entry.target];
-        const delay = (Math.max(siblings.indexOf(entry.target), 0) % 3) * 100;
-        setTimeout(() => {
-          entry.target.classList.add('revealed');
-        }, delay);
-        revealObserver.unobserve(entry.target);
-      });
-    }, { threshold: 0.15 });
-
-    revealElements.forEach((el) => revealObserver.observe(el));
-  }
 })();
