@@ -2,18 +2,50 @@
 <html lang="en">
 <head>
 <title>Creations & Details Limited | Interior Design & Construction Nairobi</title>
-<meta name="description" content="Full-service interior design and construction company in Nairobi. Design, Build, Renovate. Expert team for kitchens, interiors, exteriors & custom furniture.">
+<meta name="description" content="Full-service interior design and construction company in Nairobi. We design, build and transform spaces — kitchens, interiors, exteriors and custom furniture. One in-house team.">
 <meta charset="UTF-8">
 <link rel="icon" type="image/png" href="assets/images/logo.png">
 <meta name="theme-color" content="#0A1628">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Creations &amp; Details Limited | Interior Design &amp; Construction Nairobi">
+<meta property="og:description" content="Full-service interior design and construction firm in Nairobi. We design, build and transform spaces — one accountable in-house team.">
+<meta property="og:image" content="https://creationsdetails.com/assets/images/projects/interior/IMG-20260602-WA0043.jpg">
+<meta property="og:url" content="https://creationsdetails.com">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://creationsdetails.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Barlow:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/global.css">
 <link rel="stylesheet" href="assets/css/home.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Creations & Details Limited",
+  "description": "Full-service interior design and construction firm in Nairobi, Kenya.",
+  "url": "https://creationsdetails.com",
+  "telephone": "+254715194483",
+  "email": "info@creationsdetails.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sound Plaza, Woodvale Grove, Westlands",
+    "addressLocality": "Nairobi",
+    "addressCountry": "KE"
+  },
+  "openingHours": "Mo-Sa 08:00-18:00",
+  "sameAs": [
+    "https://www.instagram.com/creationsanddetailsltd",
+    "https://www.facebook.com/creationsanddetailsltd",
+    "https://www.tiktok.com/@creationsanddetailsltd"
+  ]
+}
+</script>
 </head>
 <body>
+
+<!-- NAV -->
 <nav id="main-nav">
   <a class="nav-logo" href="index.html">
     <img class="logo-img" src="assets/images/logo.png" alt="Creations &amp; Details Limited logo">
@@ -33,10 +65,7 @@
   <button class="nav-hamburger" aria-label="Open menu">&#9776;</button>
 </nav>
 <div class="nav-mobile-overlay" id="mobileMenu">
-  <div class="mobile-top">
-    <strong>Menu</strong>
-    <button class="mobile-close" aria-label="Close menu">&times;</button>
-  </div>
+  <div class="mobile-top"><strong>Menu</strong><button class="mobile-close" aria-label="Close menu">&times;</button></div>
   <ul class="mobile-links">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About</a></li>
@@ -46,35 +75,313 @@
     <li><a href="contact.html">Get a Quote</a></li>
   </ul>
 </div>
+
 <main>
-<section class="home-hero">
-  <div class="container hero-grid">
-    <div>
-      <div class="eyebrow reveal delay-1"><span class="eyebrow-line"></span><span class="eyebrow-text">Nairobi · Kenya · Est. In Excellence</span></div>
-      <h1 class="reveal delay-2">We Design.<br>We <em>Build.</em><br>We Transform.</h1>
-      <p class="hero-subtitle reveal delay-3">Full-service interior design and construction firm delivering end-to-end project excellence — from concept and consultancy to the final detail.</p>
-      <div class="hero-actions reveal delay-4">
+
+<!-- ══════════════════════════════════════════
+     HERO — full-screen image with slideshow
+══════════════════════════════════════════ -->
+<section class="home-hero" id="hero">
+  <!-- Slideshow backgrounds -->
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('assets/images/projects/interior/IMG-20260602-WA0043.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/projects/exterior/IMG-20260602-WA0084.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/projects/kitchen/IMG-20260602-WA0057.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/projects/bathroom&fixtures/IMG-20260602-WA0029.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/projects/furniture/IMG-20260602-WA0079.jpg')"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-content">
+    <div class="hero-text">
+      <div class="eyebrow reveal">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Nairobi · Kenya · Est. In Excellence</span>
+      </div>
+      <h1 class="reveal">We Design.<br>We <em>Build.</em><br>We Transform.</h1>
+      <p class="hero-subtitle reveal">Full-service interior design and construction — from first concept to final handover. One in-house team. Zero guesswork.</p>
+      <div class="hero-actions reveal">
         <a class="btn-primary" href="portfolio.html">View Our Work</a>
         <a class="btn-outline" href="contact.html">Start a Project</a>
       </div>
     </div>
     <div class="hero-stats">
-      <article class="stat-card"><strong>150+</strong><span>Projects Completed</span></article>
-      <article class="stat-card"><strong>10+</strong><span>Years of Excellence</span></article>
+      <div class="stat-card reveal">
+        <strong><span class="count-up" data-target="150">0</span>+</strong>
+        <span>Projects Completed</span>
+      </div>
+      <div class="stat-card reveal">
+        <strong><span class="count-up" data-target="10">0</span>+</strong>
+        <span>Years of Excellence</span>
+      </div>
+      <div class="stat-card reveal">
+        <strong>100%</strong>
+        <span>In-House Team</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide indicators -->
+  <div class="hero-dots">
+    <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+    <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+    <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+    <button class="hero-dot" data-slide="3" aria-label="Slide 4"></button>
+    <button class="hero-dot" data-slide="4" aria-label="Slide 5"></button>
+  </div>
+
+  <!-- Scroll cue -->
+  <div class="hero-scroll-cue">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     MARQUEE
+══════════════════════════════════════════ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Design &amp; Build</span><span class="marquee-dot">·</span>
+    <span>Interior Architecture</span><span class="marquee-dot">·</span>
+    <span>Kitchen Design</span><span class="marquee-dot">·</span>
+    <span>Exterior Works</span><span class="marquee-dot">·</span>
+    <span>Custom Furniture</span><span class="marquee-dot">·</span>
+    <span>Project Management</span><span class="marquee-dot">·</span>
+    <span>Floor &amp; Wall Finishes</span><span class="marquee-dot">·</span>
+    <span>Bathroom Fitouts</span><span class="marquee-dot">·</span>
+    <span>General Renovations</span><span class="marquee-dot">·</span>
+    <!-- Duplicate for seamless loop -->
+    <span>Design &amp; Build</span><span class="marquee-dot">·</span>
+    <span>Interior Architecture</span><span class="marquee-dot">·</span>
+    <span>Kitchen Design</span><span class="marquee-dot">·</span>
+    <span>Exterior Works</span><span class="marquee-dot">·</span>
+    <span>Custom Furniture</span><span class="marquee-dot">·</span>
+    <span>Project Management</span><span class="marquee-dot">·</span>
+    <span>Floor &amp; Wall Finishes</span><span class="marquee-dot">·</span>
+    <span>Bathroom Fitouts</span><span class="marquee-dot">·</span>
+    <span>General Renovations</span><span class="marquee-dot">·</span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     ABOUT TEASER — split with real image
+══════════════════════════════════════════ -->
+<section class="section about-section">
+  <div class="container about-grid">
+    <div class="about-images reveal-on-scroll">
+      <div class="about-img-main" style="background-image:url('assets/images/projects/residences/IMG-20260602-WA0106.jpg')"></div>
+      <div class="about-img-accent" style="background-image:url('assets/images/projects/interior/IMG-20260602-WA0055.jpg')"></div>
+      <div class="about-badge">
+        <strong>10+</strong>
+        <span>Years crafting exceptional spaces</span>
+      </div>
+    </div>
+    <div class="about-text reveal-on-scroll">
+      <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Who We Are</span></div>
+      <h2>Your Vision, <em>Our Craft.</em></h2>
+      <p>Creations &amp; Details Limited is a premier full-service design and construction firm based in Nairobi. We bring together architecture, design, and hands-on building expertise under one roof — eliminating the complexity of managing multiple contractors.</p>
+      <p>Our electricians, plumbers, carpenters, tilers, and designers are all on our team. Not subcontracted. Not outsourced. Ours.</p>
+      <div class="about-pillars">
+        <span>Design &amp; Build</span>
+        <span>Consultancy</span>
+        <span>Project Management</span>
+        <span>Renovation</span>
+      </div>
+      <a class="btn-primary" href="about.html">Learn More About Us</a>
     </div>
   </div>
 </section>
-<section class="marquee-strip"><div class="marquee-track"><span>Design &amp; Build · Interior Architecture · Space Planning · Kitchen Design · Project Management · Consultancy · Walling &amp; Structures · Landscaping · Floor Finishes · Custom Furniture · General Renovations · </span><span>Design &amp; Build · Interior Architecture · Space Planning · Kitchen Design · Project Management · Consultancy · Walling &amp; Structures · Landscaping · Floor Finishes · Custom Furniture · General Renovations · </span></div></section>
-<section class="section section-light"><div class="container about-teaser"><div><h2>Your Vision, <em>Our Craft.</em></h2><p>Creations &amp; Details Limited is a premier full-service design and construction firm based in Nairobi. Led by seasoned professionals with deep roots in both interior design and construction, we bring together architecture, design, and hands-on building expertise under one roof — eliminating the complexity of managing multiple contractors and the quality gaps that come with fragmented teams.</p><p>From the first conversation to the day we hand over your keys, our in-house team of specialists handles every discipline with precision. We do not subcontract our core trades. Our electricians, plumbers, carpenters, tilers, and designers are all on our team.</p><div class="pillars"><span>Design &amp; Build</span><span>Consultancy</span><span>Project Management</span><span>Renovation</span></div><a href="about.html">Learn more about us →</a></div><aside class="specialist-badge">100% In-House Specialists</aside></div></section>
-<section class="section section-dark"><div class="container"><h2>Services Snapshot</h2><div class="card-grid-3"><article class="card"><h3>Exterior Works</h3><p>Façade upgrades, masonry, landscaping and all external environments.</p></article><article class="card"><h3>Interior Design</h3><p>Concept-to-completion interior architecture with practical elegance.</p></article><article class="card"><h3>Kitchen Design</h3><p>Tailored kitchens executed by in-house designers, joiners and fitters.</p></article></div><p class="section-link"><a href="services.html">See All Services →</a></p></div></section>
-<section class="section section-gray"><div class="container"><h2>Featured Projects</h2><div class="card-grid-3"><article class="card"><h3>Ruiru Residence</h3><p>Justin · Full exterior redesign + complete interior fitout.</p></article><article class="card"><h3>Ruai Residence</h3><p>Frankline · Full construction from slab to polished handover.</p></article><article class="card"><h3>Katani Residence</h3><p>Lyndah Nyangweso · Full build + bespoke interior design.</p></article></div><p class="section-link"><a href="portfolio.html">View Full Portfolio →</a></p></div></section>
-<section class="section section-dark"><div class="container"><h2>Client Testimonials</h2><div class="card-grid-3"><article class="card"><h3>Justin M. — Ruiru Residence</h3><p>“The team at Creations &amp; Details transformed our house into something we couldn't have imagined. Every detail was executed flawlessly — the parquet flooring, the kitchen, the exterior. Pure excellence.”</p></article><article class="card"><h3>Frankline K. — Ruai Residence</h3><p>“What impressed me most was that they managed everything — I didn't have to chase a single contractor. One call, one team, and they delivered my family home on time and within budget.”</p></article><article class="card"><h3>Lyndah Nyangweso — Katani Residence</h3><p>“The kitchen they designed for me is the envy of every guest. Highly recommended.”</p></article></div></div></section>
-<section class="cta-strip"><div class="container"><h2>Let's Create Something <em>Extraordinary.</em></h2><p class="cta-copy">One call. One team. Complete delivery.</p><a class="btn-primary" href="contact.html">Start Your Project</a><a class="btn-outline" href="portfolio.html">View Our Work</a></div></section>
+
+<!-- ══════════════════════════════════════════
+     SERVICES — image cards
+══════════════════════════════════════════ -->
+<section class="section section-gray services-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">What We Do</span></div>
+        <h2>Every Service. <em>One Team.</em></h2>
+      </div>
+      <a class="btn-outline-dark" href="services.html">All Services →</a>
+    </div>
+    <div class="services-grid">
+      <a class="service-card reveal-on-scroll" href="services.html#exterior" style="background-image:url('assets/images/projects/exterior/IMG-20260602-WA0099.jpg')">
+        <div class="service-card-body"><h3>Exterior Works</h3><p>Façades, masonry, gates, landscaping &amp; paving.</p></div>
+      </a>
+      <a class="service-card reveal-on-scroll" href="services.html#interior" style="background-image:url('assets/images/projects/interior/IMG-20260602-WA0043.jpg')">
+        <div class="service-card-body"><h3>Interior Design</h3><p>Space planning, ceilings, walls &amp; complete fitouts.</p></div>
+      </a>
+      <a class="service-card reveal-on-scroll" href="services.html#kitchen" style="background-image:url('assets/images/projects/kitchen/IMG-20260602-WA0057.jpg')">
+        <div class="service-card-body"><h3>Kitchen Design</h3><p>Fitted kitchens, custom cabinetry &amp; islands.</p></div>
+      </a>
+      <a class="service-card reveal-on-scroll" href="services.html#furniture" style="background-image:url('assets/images/projects/furniture/IMG-20260602-WA0079.jpg')">
+        <div class="service-card-body"><h3>Custom Furniture</h3><p>Bespoke wardrobes, beds, TV units &amp; joinery.</p></div>
+      </a>
+      <a class="service-card reveal-on-scroll" href="services.html#fittings" style="background-image:url('assets/images/projects/bathroom&fixtures/IMG-20260602-WA0029.jpg')">
+        <div class="service-card-body"><h3>Bathroom &amp; Fixtures</h3><p>Premium sanitary ware, showers &amp; tiling.</p></div>
+      </a>
+      <a class="service-card reveal-on-scroll" href="services.html#finishes" style="background-image:url('assets/images/projects/interior/IMG-20260602-WA0034.jpg')">
+        <div class="service-card-body"><h3>Floor &amp; Wall Finishes</h3><p>Parquet, porcelain, marble &amp; feature walls.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FEATURED PROJECTS — editorial grid
+══════════════════════════════════════════ -->
+<section class="section projects-section">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Recent Work</span></div>
+        <h2>Featured <em>Projects.</em></h2>
+      </div>
+      <a class="btn-outline-dark" href="portfolio.html">Full Portfolio →</a>
+    </div>
+    <div class="featured-grid">
+      <!-- Large left -->
+      <a class="featured-card featured-card-large reveal-on-scroll" href="portfolio.html">
+        <div class="featured-img" style="background-image:url('assets/images/projects/residences/IMG-20260602-WA0106.jpg')"></div>
+        <div class="featured-body">
+          <span class="featured-tag">Residential</span>
+          <h3>Runda Residence</h3>
+          <p>Full exterior + complete interior fitout, Runda, Nairobi</p>
+        </div>
+      </a>
+      <!-- Right stack -->
+      <div class="featured-stack">
+        <a class="featured-card reveal-on-scroll" href="portfolio.html">
+          <div class="featured-img" style="background-image:url('assets/images/projects/kitchen/IMG-20260602-WA0057.jpg')"></div>
+          <div class="featured-body">
+            <span class="featured-tag">Kitchen</span>
+            <h3>Kitchen Showcase</h3>
+            <p>Fitted cabinetry, island &amp; full appliance integration</p>
+          </div>
+        </a>
+        <a class="featured-card reveal-on-scroll" href="portfolio.html">
+          <div class="featured-img" style="background-image:url('assets/images/projects/bathroom&fixtures/IMG-20260602-WA0029.jpg')"></div>
+          <div class="featured-body">
+            <span class="featured-tag">Bathroom</span>
+            <h3>Bathroom &amp; Fixtures</h3>
+            <p>Premium sanitary ware and illuminated vanities</p>
+          </div>
+        </a>
+        <a class="featured-card reveal-on-scroll" href="portfolio.html">
+          <div class="featured-img" style="background-image:url('assets/images/projects/furniture/IMG-20260602-WA0042.jpg')"></div>
+          <div class="featured-body">
+            <span class="featured-tag">Interior</span>
+            <h3>Interior Fittings</h3>
+            <p>Feature walls, panels and built-in wardrobes</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     WHY US — dark proof section
+══════════════════════════════════════════ -->
+<section class="section section-dark why-section">
+  <div class="container">
+    <div class="section-header" style="margin-bottom:3rem">
+      <div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span class="eyebrow-text">Why Choose Us</span></div>
+        <h2 style="color:#fff">One Company. <em>Every Detail.</em></h2>
+      </div>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal-on-scroll">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>100% In-House Team</h3>
+        <p>Every trade — designers, carpenters, electricians, plumbers, tilers — is on our team. One contract, one accountable party.</p>
+      </div>
+      <div class="why-card reveal-on-scroll">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3>On-Time Delivery</h3>
+        <p>Milestone-based project management with detailed programmes. We track progress daily and communicate updates proactively.</p>
+      </div>
+      <div class="why-card reveal-on-scroll">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 1 0 0 7h5a3.5 3.5 0 1 1 0 7H6"/></svg>
+        </div>
+        <h3>Transparent Budgets</h3>
+        <p>Fully itemised quotations before a single brick moves. No surprise costs, no material substitutions without your approval.</p>
+      </div>
+      <div class="why-card reveal-on-scroll">
+        <div class="why-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Post-Project Support</h3>
+        <p>We walk you through every finish on handover day and address all snags within our agreed defects liability period.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════ -->
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="eyebrow" style="justify-content:center;margin-bottom:.8rem"><span class="eyebrow-line"></span><span class="eyebrow-text">Client Stories</span></div>
+    <h2 style="text-align:center;margin-bottom:3rem">What Our <em>Clients Say.</em></h2>
+    <div class="testimonials-grid">
+      <article class="testimonial-card reveal-on-scroll">
+        <div class="testimonial-img" style="background-image:url('assets/images/projects/residences/IMG-20260602-WA0103.jpg')"></div>
+        <div class="testimonial-body">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The team transformed our house into something we couldn't have imagined. Every detail was executed flawlessly — the parquet flooring, the kitchen, the exterior. Pure excellence."</blockquote>
+          <footer><strong>Justin M.</strong> <span>Runda Residence</span></footer>
+        </div>
+      </article>
+      <article class="testimonial-card reveal-on-scroll">
+        <div class="testimonial-img" style="background-image:url('assets/images/projects/interior/IMG-20260602-WA0043.jpg')"></div>
+        <div class="testimonial-body">
+          <div class="stars">★★★★★</div>
+          <blockquote>"What impressed me most was that they managed everything. I didn't have to chase a single contractor. One call, one team — delivered on time and within budget."</blockquote>
+          <footer><strong>Frankline K.</strong> <span>Ruai Residence</span></footer>
+        </div>
+      </article>
+      <article class="testimonial-card reveal-on-scroll">
+        <div class="testimonial-img" style="background-image:url('assets/images/projects/kitchen/IMG-20260602-WA0057.jpg')"></div>
+        <div class="testimonial-body">
+          <div class="stars">★★★★★</div>
+          <blockquote>"The kitchen they designed for me is the envy of every guest. I gave them a brief, they brought it to life — better than I had pictured. Highly recommended."</blockquote>
+          <footer><strong>Lyndah Nyangweso</strong> <span>Katani Residence</span></footer>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     CTA STRIP
+══════════════════════════════════════════ -->
+<section class="cta-strip">
+  <div class="cta-strip-bg" style="background-image:url('assets/images/projects/exterior/IMG-20260602-WA0084.jpg')"></div>
+  <div class="container cta-content">
+    <h2>Let's Create Something <em>Extraordinary.</em></h2>
+    <p>One call. One team. Complete delivery.</p>
+    <div class="cta-actions">
+      <a class="btn-primary" href="contact.html">Start Your Project</a>
+      <a class="btn-outline" href="portfolio.html">View Our Work</a>
+    </div>
+  </div>
+</section>
+
 </main>
+
 <footer>
   <div class="footer-grid">
     <div class="footer-about">
-      <div class="nav-logo">
+      <div class="nav-logo" style="margin-bottom:.8rem">
         <img class="logo-img" src="assets/images/logo.png" alt="Creations &amp; Details Limited logo">
         <div class="logo-text">
           <span class="logo-name">Creations &amp; Details</span>
@@ -82,12 +389,11 @@
         </div>
       </div>
       <p>A premier full-service interior design and construction company delivering bespoke spaces across Nairobi and Kenya.</p>
-      <!-- PLACEHOLDER: Update social profile links with real handles -->
       <div class="footer-social">
-        <a class="social-link" href="#" title="Instagram"><img src="assets/images/ig-logo.jpg" alt="Instagram"></a>
-        <a class="social-link" href="#" title="Facebook"><img src="assets/images/fb-logo.jpg" alt="Facebook"></a>
-        <a class="social-link" href="#" title="LinkedIn"><img src="assets/images/linkedin-logo.jpg" alt="LinkedIn"></a>
-        <a class="social-link" href="#" title="TikTok"><img src="assets/images/tiktok-logo.jpg" alt="TikTok"></a>
+        <a class="social-link" href="https://www.instagram.com/creationsanddetailsltd" target="_blank" rel="noopener" title="Instagram" aria-label="Instagram"><img src="assets/images/ig-logo.jpg" alt="Instagram"></a>
+        <a class="social-link" href="https://www.facebook.com/creationsanddetailsltd" target="_blank" rel="noopener" title="Facebook" aria-label="Facebook"><img src="assets/images/fb-logo.jpg" alt="Facebook"></a>
+        <a class="social-link" href="https://www.linkedin.com/company/creations-and-details" target="_blank" rel="noopener" title="LinkedIn" aria-label="LinkedIn"><img src="assets/images/linkedin-logo.jpg" alt="LinkedIn"></a>
+        <a class="social-link" href="https://www.tiktok.com/@creationsanddetailsltd" target="_blank" rel="noopener" title="TikTok" aria-label="TikTok"><img src="assets/images/tiktok-logo.jpg" alt="TikTok"></a>
       </div>
     </div>
     <div class="footer-col">
@@ -118,7 +424,7 @@
       <ul>
         <li><a href="tel:+254715194483">+254 715 194 483</a></li>
         <li><a href="mailto:info@creationsdetails.com">info@creationsdetails.com</a></li>
-        <li><a href="contact.html">Sound Plaza, Woodvale Grove, Westlands, Nairobi</a></li>
+        <li><a href="contact.html">Sound Plaza, Woodvale Grove,<br>Westlands, Nairobi</a></li>
       </ul>
     </div>
   </div>
@@ -127,9 +433,11 @@
     <span class="footer-tagline">"Where vision meets craftsmanship."</span>
   </div>
 </footer>
+
 <a class="whatsapp-btn" href="https://wa.me/254715194483" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg>
 </a>
+
 <script src="assets/js/global.js"></script>
 <script src="assets/js/home.js"></script>
 </body>
